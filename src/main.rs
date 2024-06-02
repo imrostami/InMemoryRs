@@ -24,6 +24,8 @@ fn main() {
             };
 
             store.append(&mut vec![store_data]);
+            println!("OK");
+
         } else if input.starts_with("getall") {
             for item in &store {
                 println!("{}:{}", item.Key, item.Value);
@@ -49,14 +51,14 @@ fn main() {
                 if kv.Key == data[1] {
                     let index = store.iter().position(|x| *x.Key == kv.Key).unwrap();
                     store.remove(index);
-                    println!("Item Droped");
+                    println!("OK");
                     break;
                 } else {
                     println!("Key Not Exist");
                 }
             }
         } else {
-            println!("Syntax Error");
+           
         }
     }
 }
